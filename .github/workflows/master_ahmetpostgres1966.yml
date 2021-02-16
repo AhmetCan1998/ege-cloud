@@ -19,17 +19,17 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.7'
+        python-version: '3.8'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v2
       with:
         platform: python
-        platform-version: '3.7'
+        platform-version: '3.8'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'ahmetpostgres1966'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_eaecee8449254eb38b72d45a09652d4a }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_daa4184d04d84a27be75fedfda7e6609 }}
